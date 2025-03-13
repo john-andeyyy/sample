@@ -53,6 +53,33 @@
             color: #6a4b3d;
         }
 
+        .video-section {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .video-section a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #6b4f4f;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .video-section a:hover {
+            background-color: #5a3e36;
+        }
+
+        .video-section iframe {
+            display: block;
+            margin: 1.5rem auto;
+            border-radius: 8px;
+        }
+
         .content {
             display: flex;
             flex-wrap: wrap;
@@ -69,12 +96,11 @@
             box-sizing: border-box;
             text-align: center;
             border: 2px solid #5a3e36;
+            max-width: 300px;
         }
 
         .card img {
             width: 100%;
-            max-height: full;
-            object-fit: cover;
             border-radius: 5px;
             margin-bottom: 1rem;
         }
@@ -97,6 +123,21 @@
             margin-top: 2rem;
             font-size: 0.9rem;
         }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                flex: 1 1 100%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -109,11 +150,16 @@
             <h1>Rediscover the Past</h1>
             <p>Explore the rich history and significance of RPH through time.</p>
         </div>
-        <div class="">
-            <a href="https://www.facebook.com/camscams.rows">
-                <h1>fb</h1>
-            </a>
+
+        <div class="video-section">
+            <a href="https://www.facebook.com/camscams.rows" target="_blank">Visit our Facebook</a>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/D-lBSbA4Hok"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
+
         <div class="content">
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Jose_Rizal_full.jpg" alt="Old book">
